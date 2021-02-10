@@ -14,6 +14,7 @@
 
             padding:5px;
             border: 1px solid;
+            
         }
     </style>
 </head>
