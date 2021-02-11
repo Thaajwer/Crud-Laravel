@@ -22,5 +22,6 @@ class PostController extends Controller
     public function postList(){
         $posts =DB:: table('posts')-> get();
         return view('post-list',compact('posts'));
+        
     }
 }
