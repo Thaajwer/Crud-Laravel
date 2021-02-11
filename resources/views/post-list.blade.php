@@ -19,6 +19,11 @@
     </style>
 </head>
 <body>
+
+@if(Session::has('post_delete'))
+<span>{{Session::get('post_delete')}} </span>
+@endif
+
 <a style="float:right" href="{{route('post.add')}}">Add Post</a>
     <table>
         <tr>
@@ -33,8 +38,8 @@
             <td>{{$post->name}}</td>
             <td>{{$post->description}}</td>
             <td>
-                <a>Edit</a>
-                <a>Delete</a>
+                <a href="/edit-post/{{$post->id}}">Edit</a>
+                <a href="/delete-post/{{$post->id}}">Delete</a>
             </td>
         </tr>
     @endforeach
