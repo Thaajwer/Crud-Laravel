@@ -17,7 +17,6 @@ class PostController extends Controller
             ]);
 
         return back()->with('post_add','post added succesfully');
-    
     }
     public function postList(){
         $posts =DB:: table('posts')-> get();
